@@ -15,7 +15,7 @@ p1AngularVelocity <- rep(0.0, 7)
 p2Angle <- rep(1500 : 1506) / 10
 p2AngularVelocity <- rep(0.0, 7)  
 dt = 0.001                      
-totalTime = 3.00              
+totalTime = 15.00              
 
 p1Angle = p1Angle * pi / 180
 p1AngularVelocity = p1AngularVelocity * pi / 180
@@ -129,28 +129,28 @@ ggplot(drawingData) +
   geom_segment(aes(x = 6.4, xend = 6.4, y = -2.4, yend = 2.4)) +
   geom_segment(aes(x = -6.4, xend = 6.4, y = 2.4, yend = 2.4)) +
   geom_segment(aes(x = 0, xend = 0, y = -2.4, yend = 2.4)) +
-  # geom_segment(aes(x = 0, y = 0, xend = p1x[ , 1], yend = p1y[ , 1])) +
-  # geom_segment(aes(x = 0, y = 0, xend = p1x[ , 2], yend = p1y[ , 2])) +
-  # geom_segment(aes(x = 0, y = 0, xend = p1x[ , 3], yend = p1y[ , 3])) +
-  # geom_segment(aes(x = 0, y = 0, xend = p1x[ , 4], yend = p1y[ , 4])) +
-  # geom_segment(aes(x = 0, y = 0, xend = p1x[ , 5], yend = p1y[ , 5])) +
-  # geom_segment(aes(x = 0, y = 0, xend = p1x[ , 6], yend = p1y[ , 6])) +
-  # geom_segment(aes(x = 0, y = 0, xend = p1x[ , 7], yend = p1y[ , 7])) +
-  # geom_segment(aes(x = p1x[ , 1], y = p1y[ , 1], xend = p2x[ , 1], yend = p2y[ , 1])) +
-  # geom_segment(aes(x = p1x[ , 2], y = p1y[ , 2], xend = p2x[ , 2], yend = p2y[ , 2])) +
-  # geom_segment(aes(x = p1x[ , 3], y = p1y[ , 3], xend = p2x[ , 3], yend = p2y[ , 3])) +
-  # geom_segment(aes(x = p1x[ , 4], y = p1y[ , 4], xend = p2x[ , 4], yend = p2y[ , 4])) +
-  # geom_segment(aes(x = p1x[ , 5], y = p1y[ , 5], xend = p2x[ , 5], yend = p2y[ , 5])) +
-  # geom_segment(aes(x = p1x[ , 6], y = p1y[ , 6], xend = p2x[ , 6], yend = p2y[ , 6])) +
-  # geom_segment(aes(x = p1x[ , 7], y = p1y[ , 7], xend = p2x[ , 7], yend = p2y[ , 7])) +
-  # geom_point(x = 0, y = 0, size  = 2.0) +
-  # geom_point(aes(p1x[ , 1], p1y[ , 1]), col = "dark gray", size = 5.0 * p1Mass) +
-  # geom_point(aes(p1x[ , 2], p1y[ , 2]), col = "dark gray", size = 5.0 * p1Mass) +
-  # geom_point(aes(p1x[ , 3], p1y[ , 3]), col = "dark gray", size = 5.0 * p1Mass) +
-  # geom_point(aes(p1x[ , 4], p1y[ , 4]), col = "dark gray", size = 5.0 * p1Mass) +
-  # geom_point(aes(p1x[ , 5], p1y[ , 5]), col = "dark gray", size = 5.0 * p1Mass) +
-  # geom_point(aes(p1x[ , 6], p1y[ , 6]), col = "dark gray", size = 5.0 * p1Mass) +
-  # geom_point(aes(p1x[ , 7], p1y[ , 7]), col = "dark gray", size = 5.0 * p1Mass) +
+  geom_segment(aes(x = 0, y = 0, xend = p1x[ , 1], yend = p1y[ , 1])) +
+  geom_segment(aes(x = 0, y = 0, xend = p1x[ , 2], yend = p1y[ , 2])) +
+  geom_segment(aes(x = 0, y = 0, xend = p1x[ , 3], yend = p1y[ , 3])) +
+  geom_segment(aes(x = 0, y = 0, xend = p1x[ , 4], yend = p1y[ , 4])) +
+  geom_segment(aes(x = 0, y = 0, xend = p1x[ , 5], yend = p1y[ , 5])) +
+  geom_segment(aes(x = 0, y = 0, xend = p1x[ , 6], yend = p1y[ , 6])) +
+  geom_segment(aes(x = 0, y = 0, xend = p1x[ , 7], yend = p1y[ , 7])) +
+  geom_segment(aes(x = p1x[ , 1], y = p1y[ , 1], xend = p2x[ , 1], yend = p2y[ , 1])) +
+  geom_segment(aes(x = p1x[ , 2], y = p1y[ , 2], xend = p2x[ , 2], yend = p2y[ , 2])) +
+  geom_segment(aes(x = p1x[ , 3], y = p1y[ , 3], xend = p2x[ , 3], yend = p2y[ , 3])) +
+  geom_segment(aes(x = p1x[ , 4], y = p1y[ , 4], xend = p2x[ , 4], yend = p2y[ , 4])) +
+  geom_segment(aes(x = p1x[ , 5], y = p1y[ , 5], xend = p2x[ , 5], yend = p2y[ , 5])) +
+  geom_segment(aes(x = p1x[ , 6], y = p1y[ , 6], xend = p2x[ , 6], yend = p2y[ , 6])) +
+  geom_segment(aes(x = p1x[ , 7], y = p1y[ , 7], xend = p2x[ , 7], yend = p2y[ , 7])) +
+  geom_point(x = 0, y = 0, size  = 2.0) +
+  geom_point(aes(p1x[ , 1], p1y[ , 1]), col = "dark gray", size = 5.0 * p1Mass) +
+  geom_point(aes(p1x[ , 2], p1y[ , 2]), col = "dark gray", size = 5.0 * p1Mass) +
+  geom_point(aes(p1x[ , 3], p1y[ , 3]), col = "dark gray", size = 5.0 * p1Mass) +
+  geom_point(aes(p1x[ , 4], p1y[ , 4]), col = "dark gray", size = 5.0 * p1Mass) +
+  geom_point(aes(p1x[ , 5], p1y[ , 5]), col = "dark gray", size = 5.0 * p1Mass) +
+  geom_point(aes(p1x[ , 6], p1y[ , 6]), col = "dark gray", size = 5.0 * p1Mass) +
+  geom_point(aes(p1x[ , 7], p1y[ , 7]), col = "dark gray", size = 5.0 * p1Mass) +
   geom_point(aes(p2x[ , 1] + 3.2, p2y[ , 1]), col = "magenta", size = 5.0 * p2Mass) +
   geom_point(aes(p2x[ , 2] + 3.2, p2y[ , 2]), col = "purple", size = 5.0 * p2Mass) +
   geom_point(aes(p2x[ , 3] + 3.2, p2y[ , 3]), col = "blue", size = 5.0 * p2Mass) +
@@ -172,5 +172,10 @@ ggplot(drawingData) +
   transition_reveal(time) -> pendulum7Plots
   pendulum7Plots <- pendulum7Plots + coord_fixed()
 
-pendulum7Animation <- animate(pendulum7Plots, nframes = nrow(drawingData) / 3, fps = 25)
-pendulum7Animation
+# pendulum7Animation <- animate(pendulum7Plots, nframes = nrow(drawingData) / 3, fps = 25)
+# pendulum7Animation
+
+animate(pendulum7Plots, nframes = nrow(drawingData) / 3, fps = 25)
+anim_save("dPendulum7.mp4")
+
+system("ffmpeg -i dPendulum7.mp4 -vf 'setpts=1*PTS' dPendulum7_f.mp4")

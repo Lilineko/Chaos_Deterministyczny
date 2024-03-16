@@ -136,9 +136,14 @@ ggplot(drawingData) +
   scale_y_continuous(limits = c(-2.5, 2.5)) +
   scale_x_continuous(limits = c(-2.5, 2.5)) +
   ggraph::theme_graph() +
-  labs(title="{floor(frame_time)} s") +
+  labs(title="{floor(2 * frame_time)} s") +
   shadow_wake(wake_length = 1.0 / totalTime, alpha = FALSE, wrap = FALSE) +
   transition_time(time) -> pendulumPlots
 
-pendulumAnimation <- animate(pendulumPlots, nframes = nrow(drawingData), fps = 25)
-pendulumAnimation
+# pendulumAnimation <- animate(pendulumPlots, nframes = nrow(drawingData), fps = 25)
+# pendulumAnimation
+
+animate(pendulumPlots, nframes = nrow(drawingData), fps = 25)
+anim_save("doublePendulum.mp4")
+
+system("ffmpeg -i doublePendulum.mp4 -vf 'setpts=1*PTS' doublePendulum_f.mp4")

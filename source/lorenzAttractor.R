@@ -91,7 +91,7 @@ ggplot(drawingData) +
 # attractorAnimation <- animate(attractorPlots, nframes = nrow(drawingData) / 5, fps = 25)
 # attractorAnimation
 
-# animate(attractorPlots, nframes = nrow(drawingData) / 5, fps = 25)
-# anim_save("lorenz.mp4")
-# 
-# system("ffmpeg -i lorenz.mp4 -vf 'setpts=2*PTS' lorenz_slow.mp4")
+animate(attractorPlots, nframes = nrow(drawingData) / 5, fps = 25)
+anim_save("lorenz.mp4")
+
+system("ffmpeg -i lorenz.mp4 -vf 'setpts=2*PTS' lorenz_f.mp4")
